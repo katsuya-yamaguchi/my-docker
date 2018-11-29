@@ -1,0 +1,6 @@
+jenkins: 
+  image: 
+  volumes_from:
+    - do
+  ports:
+    - ""
