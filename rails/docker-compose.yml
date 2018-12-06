@@ -2,6 +2,8 @@ web-ap:
   build: "./web-ap" 
   ports:
     - "8888:443"
+  volumes:
+    - "./web-ap/app:/var/www/html"
   container_name: "web-ap"
   #db:
   #  image: ""
