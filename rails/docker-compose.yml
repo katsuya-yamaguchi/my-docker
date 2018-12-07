@@ -5,7 +5,11 @@ web-ap:
   volumes:
     - "./web-ap/app:/var/www/html"
   container_name: "web-ap"
-  #db:
-  #  image: ""
-  #  ports:
-  #- ""
+db:
+  image: postgres:10.6
+  ports:
+    - "5432:5432"
+  volumes:
+    - "./db:/var/lib/pgsql/data"
+  container_name: "db"
+
